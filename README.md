@@ -7,32 +7,6 @@ This is a responsive **Frontend Settings Page UI** built using HTML, CSS, and Ja
 
 ---
 
-## 📁 Folder Structure
-
-frontend-assignment/
-│
-├── main-page.html
-│
-├── css/
-│   ├── profile-settings.css
-│   ├── notification-preferences.css
-│   └── sidebar.css
-|   └── Change-password.css
-|   └── Data-and-Privacy.css
-|   └── Default-Settings.css
-|   └── Integration-settings.css
-│
-├── js/
-│   └── main.js
-│
-├── assets/
-│   └── images/
-│       
-│
-├── README.md
-└── requirements.txt
-
-
 
 
 ---
@@ -62,7 +36,7 @@ frontend-assignment/
 
 - **HTML5**
 - **CSS3**
-- **JavaScript (Vanilla JS)**
+- **JavaScript**
 
 ---
 
