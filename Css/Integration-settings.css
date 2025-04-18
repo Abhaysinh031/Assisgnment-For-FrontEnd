@@ -1,0 +1,141 @@
+/* Styling for the main container */
+#Integration-Settings {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Integration Section Styling */
+.integration-section {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Email SMTP Setup Row */
+.smtp-setup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.smtp-info {
+    display: flex;
+    align-items: center;
+}
+
+.smtp-info i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #6B54FF;
+}
+
+.smtp-info div strong {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.smtp-info div small {
+    color: #6c757d;
+    margin-left: 10px;
+}
+
+.smtp-setup i {
+    cursor: pointer;
+    
+    font-size: 20px;
+}
+
+/* WebHook URL Section */
+.webhook-url {
+    margin-top: 20px;
+}
+
+.webhook-url strong {
+    font-size: 16px;
+}
+
+.webhook-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.webhook-link a {
+    text-decoration: none;
+    color: #333;
+    word-wrap: break-word;
+}
+
+.webhook-link i {
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Save Button Styling */
+.save-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background-color: #6B54FF;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.save-button:hover {
+    background-color: #503ec0;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .smtp-setup,
+    .webhook-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .save-button {
+        width: 100%;
+    }
+
+    .smtp-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .webhook-link {
+        width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .smtp-info i,
+    .smtp-setup i,
+    .webhook-link i {
+        font-size: 1rem;
+        margin: 10px;
+    }
+
+    .save-button {
+        font-size: 0.95rem;
+    }
+}

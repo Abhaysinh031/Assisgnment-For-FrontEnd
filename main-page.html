@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Settings</title>
+    <link rel="stylesheet" href="./Css/slidebar.css">
+    <link rel="stylesheet" href="./Css/Change-password.css">
+    <link rel="stylesheet" href="./Css/Profile-settings.css">
+    <link rel="stylesheet" href="./Css/Default-Settings.css">
+    <link rel="stylesheet" href="./Css/Notification-prefrences.css">
+    <link rel="stylesheet" href="./Css/Data-and-Privacy.css">
+    <link rel="stylesheet" href="./Css/Integration-settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <span class="brand-name">Tech Ai</span>
+                <span class="plus-icon">+</span>
+                
+    
+            </div>
+            
+            <ul>
+                <li class="tab" data-content="Profile-Settings"><i class="fas fa-user"></i><span> Profile Settings </span></li>
+                <li class="tab" data-content="Change-Password"><i class="fas fa-lock"></i><span> Change Password </span></li>
+                <li class="tab" data-content="Default-Settings"><i class="fas fa-sliders-h"></i><span> Default Settings </span></li>
+                <li class="tab" data-content="Notification-Settings"><i class="fas fa-bell"></i><span> Notification Settings </span></li>
+                <li class="tab" data-content="Data-and-Privacy"><i class="fas fa-user-shield"></i><span> Data and Privacy </span></li>
+                <li class="tab" data-content="Integration-Settings"><i class="fas fa-plug"></i><span> Integration Settings </span></li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <img src="./assets/images/professional-headshot-tips-for-men-business.jpeg" alt="Admin Profile" class="sidebar-profile-pic" />
+                <div class="sidebar-user-info">
+                  <h4>Admin Name</h4>
+                  <p>admin@example.com</p>
+                </div>
+              </div>
+              
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            
+            <h2 class="all-pages-title">Settings</h2>
+            <p class="breadcrumb" id="breadcrumb">Settings > Profile Settings</p>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <div class="overlay" onclick="toggleMenu()"></div>
+            <div id="Profile-Settings" class="content">
+                <!-- Content for Profile-settings -->
+                <h1>Profile Settings</h1>
+                <div class="profile-section">
+                    <div class="profile-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h2 class="profile-heading">Profile Details</h2>
+                    <p class="profile-description">
+                        Manage your personal information and how it appears on your profile.
+                    </p>
+                </div>
+                <div class="personal-information">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" />
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" />
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="job">Job Title</label>
+                            <input type="text" id="job" placeholder="Enter your job title" />
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="bio">Bio</label>
+                            <textarea id="bio" placeholder="Write a short bio"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="profile-picture">
+                    <div class="image-preview">
+                        <img id="profileImage" src="https://via.placeholder.com/100" alt="Profile Picture" onerror="this.onerror=null; this.src='./assets/images/professional-headshot-tips-for-men-business.jpeg';"/>
+                    </div>
+                    <div class="upload-button">
+                        <label for="fileUpload" class="upload-label">Upload Profile Photo</label>
+                        <input type="file" id="fileUpload" accept="image/*" hidden />
+                    </div>
+                </div>
+                <h2>Contact Information</h2>
+                <div class="contact-information">
+                    
+                    <div class="contact-details">
+                        <div class="contact-icon">
+                            <i class="fas fa-address-book"></i>
+                        </div>
+                        <h2>Contact Details</h2>
+                        <p>Manage your contact information for account notification and recovery.</p>
+                    </div>
+                
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter your phone number" />
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="altEmail">Alternative Email</label>
+                            <input type="email" id="altEmail" placeholder="Enter an alternative email" />
+                        </div>
+                    </form>
+                </div>
+                <h2>Account Preferences</h2>
+                <div class="account-preferences">
+                    
+                
+                    <div class="preference-row">
+                        <div class="label-with-icon">
+                            <i class="fas fa-language"></i>
+                            <label for="language">Language</label>
+                        </div>
+                        <select id="language">
+                            <option>Select</option>
+                            <option>English</option>
+                            <option>Spanish</option>
+                            <option>French</option>
+                            <option>German</option>
+                            <option>Japanese</option>
+                            <option>Hindi</option>
+                            <option>Arabic</option>
+                            <option>Russian</option>
+                            <option>Portuguese</option>
+                            <option>Mandarin</option>
+                        </select>
+                    </div>
+                
+                    <div class="preference-row">
+                        <div class="label-with-icon">
+                            <i class="fas fa-clock"></i>
+                            <label for="timezone">Time Zone</label>
+                        </div>
+                        <select id="timezone">
+                            <option>Select</option>
+                            <option>UTC−12:00</option>
+                            <option>UTC−08:00 (Pacific Time)</option>
+                            <option>UTC−05:00 (Eastern Time)</option>
+                            <option>UTC+00:00 (GMT)</option>
+                            <option>UTC+01:00 (CET)</option>
+                            <option>UTC+05:30 (IST)</option>
+                            <option>UTC+08:00 (CST)</option>
+                            <option>UTC+09:00 (JST)</option>
+                            <option>UTC+10:00 (AEST)</option>
+                        </select>
+                    </div>
+                
+                    <div class="preference-row">
+                        <div class="label-with-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                            <label for="dateFormat">Date Format</label>
+                        </div>
+                        <select id="dateFormat">
+                            <option>Select</option>
+                            <option>DD/MM/YYYY</option>
+                            <option>MM/DD/YYYY</option>
+                            <option>YYYY/MM/DD</option>
+                            <option>YYYY-DD-MM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-buttons" style="height: 100px;">
+                    <button class="save-btn">Save Changes</button>
+                    <button class="cancel-btn">Cancel</button>
+                </div>                
+            </div>
+
+
+            <!-- 2nd content -->
+            <div id="Change-Password" class="content">
+                <!-- Content for Change-password -->
+                <h1>Password Security</h1>
+                <div class="update-password">
+                    <div class="password-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h2 style="font-weight: 600;" class="password-heading">Update Password</h2>
+                    <p class="password-description">Change your password to maintain account security. We recommend using a strong, unique password.</p>
+                </div>
+                
+                <form class="password-form">
+                    <div class="form-group password-field">
+                        <label for="currentPassword">Current Password</label>
+                        <div class="input-with-icon">
+                            <input type="password" id="currentPassword" placeholder="Enter current password">
+                            <i class="fas fa-eye toggle-password" data-target="currentPassword"></i>
+                        </div>
+                    </div>
+            
+                    <div class="form-group password-field">
+                        <label for="newPassword">New Password</label>
+                        <div class="input-with-icon">
+                            <input type="password" id="newPassword" placeholder="Enter new password">
+                            <i class="fas fa-eye toggle-password" data-target="newPassword"></i>
+                        </div>
+                    </div>
+            
+                    <div class="form-group password-field">
+                        <label for="confirmPassword">Confirm New Password</label>
+                        <div class="input-with-icon">
+                            <input type="password" id="confirmPassword" placeholder="Confirm new password">
+                            <i class="fas fa-eye toggle-password" data-target="confirmPassword"></i>
+                        </div>
+                    </div>
+                </form>
+                <h3 style="margin-top: 5%;">Password Requirements</h3>
+                <div class="password-requirement">
+                    
+                    <ul>
+                        <li><span class="icon-box"><i class="fas fa-check"></i></span>  Minimum 8 characters</li>
+                        <li><span class="icon-box"><i class="fas fa-check"></i></span>At least one uppercase letter</li>
+                        <li><span class="icon-box"><i class="fas fa-check"></i></span>At least one number</li>
+                        <li><span class="icon-box"><i class="fas fa-check"></i></span> At least one special character</li>
+                    </ul>
+                </div>
+
+                <h3 style="margin-top: 5%;">Security Options</h3>
+                <div class="security-options">
+                    <div class="security-row">
+                        <div class="security-left">
+                            <i class="fas fa-shield-alt security-icon"></i>
+                            <div class="security-text">
+                                <strong>Two-Factor Authentication</strong>
+                                <p class="security-subtext">Add an extra layer of security</p>
+                            </div>
+                        </div>
+                        <div class="security-right">
+                            <label class="switch">
+                                <input type="checkbox" id="twoFactor">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                
+                    <div class="security-row">
+                        <div class="security-left">
+                            <i class="fas fa-hourglass-half security-icon"></i>
+                            <div class="security-text">
+                                <strong>Password Expiration</strong>
+                                <p class="security-subtext">Require password change every 90 days</p>
+                            </div>
+                        </div>
+                        <div class="security-right">
+                            <label class="switch">
+                                <input type="checkbox" id="passwordExpiration">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                
+                    <div class="security-row">
+                        <div class="security-left">
+                            <i class="fas fa-sign-in-alt security-icon"></i>
+                            <div class="security-text">
+                                <strong>Login Notification</strong>
+                                <p class="security-subtext">Get alerts for new login attempts</p>
+                            </div>
+                        </div>
+                        <div class="security-right">
+                            <label class="switch">
+                                <input type="checkbox" id="loginNotification">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="password-action-buttons">
+                    <button class="update-btn">Update Password</button>
+                    <button class="cancel-btn">Cancel</button>
+                </div>
+                
+            </div>
+
+            <!-- 3rd Content -->
+            <div id="Default-Settings" class="content">
+                <!-- Content for default-settings -->
+                <h1>System Preferences</h1>
+                <div class="system-preferences">
+                    <div class="default-settings-box">
+                        <div class="settings-icon" >
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h2>Default Settings</h2>
+                        <p>
+                            Configure system-wide defaults for your TechAl experience. These settings apply across all features.
+                        </p>
+                    </div>
+                </div>
+                <!-- Display Settings Section -->
+                <h2 style="font-size: 20px;
+                color: #333;
+                font-weight: 600;
+                margin-bottom: 20px;" class="display_setting">Display Settings</h2>
+                <div class="display-settings">
+
+                    <!-- Theme Option -->
+                    <div class="display-row">
+                        <div class="display-left">
+                            <i class="fas fa-palette display-icon"></i>
+                            <div class="display-text">
+                                <strong>Theme</strong>
+                                <p>Choose your preferred visual theme</p>
+                            </div>
+                        </div>
+                        <div class="display-right">
+                            <select class="theme-select">
+                                <option>Select Theme</option>
+                                <option>Light</option>
+                                <option>Dark</option>
+                                <option>System Default</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Dark Mode Toggle -->
+                    <div class="display-row">
+                        <div class="display-left">
+                            <i class="fas fa-moon display-icon"></i>
+                            <div class="display-text">
+                                <strong>Dark Mode</strong>
+                                <p>Enable dark mode for low-lighting environments</p>
+                            </div>
+                        </div>
+                        <div class="display-right">
+                            <label class="switch">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Compact View Toggle -->
+                    <div class="display-row">
+                        <div class="display-left">
+                            <i class="fas fa-compress display-icon"></i>
+                            <div class="display-text">
+                                <strong>Compact View</strong>
+                                <p>Display more content with reducing spacing</p>
+                            </div>
+                        </div>
+                        <div class="display-right">
+                            <label class="switch">
+                                <input type="checkbox" id="compactViewToggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <h2 style="font-size: 20px;
+                color: #333;
+                font-weight: 600;
+                margin-bottom: 20px;
+                margin-top: 5%;">Language & Region</h2>
+                <div class="language-region-settings">
+
+                    <!-- Language Option -->
+                    <div class="display-row-lang">
+                        <div class="display-left-lang">
+                            <i class="fas fa-language display-icon-lang"></i>
+                            <div class="display-text">
+                                <strong>Language</strong>
+                                <p>Set your preferred language</p>
+                            </div>
+                        </div>
+                        <div class="display-right-lang">
+                            <select class="language-select">
+                                <option>Select Language</option>
+                                <option>English</option>
+                                <option>Spanish</option>
+                                <option>French</option>
+                                <option>German</option>
+                                <option>Chinese</option>
+                                <option>Japanese</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <!-- Time Zone Option -->
+                    <div class="display-row-lang">
+                        <div class="display-left-lang">
+                            <i class="fas fa-clock display-icon-lang"></i>
+                            <div class="display-text">
+                                <strong>Time Zone</strong>
+                                <p>Set your local time zone</p>
+                            </div>
+                        </div>
+                        <div class="display-right-lang">
+                            <select class="timezone-select">
+                                <option>Select Time Zone</option>
+                                <option>UTC−12:00</option>
+                                <option>UTC−08:00 (Pacific Time)</option>
+                                <option>UTC−05:00 (Eastern Time)</option>
+                                <option>UTC+00:00 (UTC)</option>
+                                <option>UTC+01:00 (Central European Time)</option>
+                                <option>UTC+05:30 (India Standard Time)</option>
+                                <option>UTC+08:00 (China Standard Time)</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <!-- Date Format Option -->
+                    <div class="display-row-lang">
+                        <div class="display-left-lang">
+                            <i class="fas fa-calendar-alt display-icon-lang"></i>
+                            <div class="display-text">
+                                <strong>Date Format</strong>
+                                <p>Choose how dates are displayed</p>
+                            </div>
+                        </div>
+                        <div class="display-right-lang">
+                            <select class="date-format-select">
+                                <option>Select Date Format</option>
+                                <option>MM/DD/YYYY</option>
+                                <option>DD/MM/YYYY</option>
+                                <option>YYYY-MM-DD</option>
+                                <option>MMM DD, YYYY</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                </div>
+
+                
+                <!-- AI Processing Defaults Section -->
+                <h2 style="font-size: 20px;
+                color: #333;
+                font-weight: 600;
+                margin-top: 40px;
+                margin-bottom: 20px;">AI Processing Defaults</h2>
+    
+                <div class="ai-processing-defaults">
+    
+                    
+                    <!-- Default Resolution Option -->
+                    <div class="display-row-Ai">
+                        <div class="display-left-Ai">
+                            <i class="fas fa-image display-icon-Ai"></i>
+                            <div class="display-text">
+                                <strong>Default Resolution</strong>
+                                <p>Set default resolution for AI processing</p>
+                            </div>
+                        </div>
+                        <div class="display-right-Ai">
+                            <select class="resolution-select">
+                                <option>Select Resolution</option>
+                                <option>720p (HD)</option>
+                                <option>1080p (Full HD)</option>
+                                <option>1440p (Quad HD)</option>
+                                <option>4K (Ultra HD)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Processing Quality Option -->
+                    <div class="display-row-Ai">
+                        <div class="display-left-Ai">
+                            <i class="fas fa-tachometer-alt display-icon-Ai"></i>
+                            <div class="display-text">
+                                <strong>Processing Quality</strong>
+                                <p>Balance between space and quality</p>
+                            </div>
+                        </div>
+                        <div class="display-right-Ai">
+                            <select class="quality-select">
+                                <option>Select Quality</option>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                                <option>Maximum</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Auto Save Results Toggle -->
+                    <div class="display-row-Ai">
+                        <div class="display-left-Ai">
+                            <i class="fas fa-save display-icon-Ai"></i>
+                            <div class="display-text">
+                                <strong>Auto Save Results</strong>
+                                <p>Automatically save processed images</p>
+                            </div>
+                        </div>
+                        <div class="display-right-Ai">
+                            <label class="switch">
+                                <input type="checkbox" id="autoSaveToggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- System Performance Section -->
+                <h2 style="font-size: 20px;
+                color: #333;
+                font-weight: 600;
+                margin-top: 40px;
+                margin-bottom: 20px;">System Performance</h2>
+
+                <div class="system-performance">
+
+                </div>
+                <!-- Hardware Acceleration Toggle -->
+                <div class="display-row-Ai">
+                    <div class="display-left-Ai">
+                        <i class="fas fa-microchip display-icon-Ai"></i>
+                        <div class="display-text">
+                            <strong>Hardware Acceleration</strong>
+                            <p>Use GPU for faster processing</p>
+                        </div>
+                    </div>
+                    <div class="display-right-AI">
+                        <label class="switch">
+                            <input type="checkbox" id="hardwareAccelerationToggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            
+                <!-- Background Processing Toggle -->
+                <div class="display-row-Ai">
+                    <div class="display-left-Ai">
+                        <i class="fas fa-tasks display-icon-Ai"></i>
+                        <div class="display-text">
+                            <strong>Background Processing</strong>
+                            <p>Continue processing when app is minimized</p>
+                        </div>
+                    </div>
+                    <div class="display-right-Ai">
+                        <label class="switch">
+                            <input type="checkbox" id="backgroundProcessingToggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="settings-actions" style="margin-top: 40px; display: flex; gap: 15px; height: 100px;">
+
+                    <button class="btn-save" style="height: 50px;">
+                        Save Changes
+                    </button>
+
+                    <button class="btn-reset" style="height: 50px;">
+                         Reset to Defaults
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- 4th Content -->
+            <div id="Notification-Settings" class="content">
+                <!-- Content for Notification-settings -->
+                <h1>Notification Preferences</h1>
+                <div id="Notification-Preferences" class="notification-preferences">
+                    <div class="icon" style="font-size: 48px; margin-bottom: 10px;">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h2>Notification Settings</h2>
+                    <p>
+                        Manage how and when you receive notifications from TechAl. 
+                        Customize alerts for different activities and channels.
+                    </p>
+                </div>
+                <h2 style="margin-top: 5%; font-size: 20px; font-weight: 550;">Email Notifications</h2>
+                <div id="Email-Notifications" class="email-notifications">
+                    
+            
+                    <!-- Processing Completed -->
+                    <div class="notification-row">
+                        <div class="notification-icon-text">
+                            <i class="fas fa-envelope"></i>
+                            <div class="text">
+                                <strong>Processing Completed</strong>
+                                <small>Receive email when AI processing is complete</small>
+                            </div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+            
+                    <!-- New Features -->
+                    <div class="notification-row">
+                        <div class="notification-icon-text">
+                            <i class="fas fa-bolt"></i>
+                            <div class="text">
+                                <strong>New Features</strong>
+                                <small>Updates about new TechAI capabilities</small>
+                            </div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+            
+                    <!-- Account Updates -->
+                    <div class="notification-row">
+                        <div class="notification-icon-text">
+                            <i class="fas fa-user-shield" ></i>
+                            <div class="text">
+                                <strong>Account Updates</strong>
+                                <small>Security and account-related notifications</small>
+                            </div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- In-App Notifications -->
+                <h2 style="margin-top: 5%; font-size: 20px; font-weight: 550;">In-App Notifications</h2>
+                <div id="In-App-Notifications" class="in-app-notifications">
+
+                    
+                    <!-- Processing Status -->
+                    <div class="notification-row">
+                        <div class="notification-icon-text">
+                            <i class="fas fa-spinner"></i>
+                            <div class="text">
+                                <strong>Processing Status</strong>
+                                <small>Show real-time processing updates</small>
+                            </div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                
+                    <!-- System Alerts -->
+                    <div class="notification-row">
+                        <div class="notification-icon-text">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div class="text">
+                                <strong>System Alerts</strong>
+                                <small>Important system messages and warnings</small>
+                            </div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                
+                    <!-- Tips & Suggestions -->
+                    <div class="notification-row">
+                        <div class="notification-icon-text">
+                            <i class="fas fa-lightbulb"></i>
+                            <div class="text">
+                                <strong>Tips & Suggestions</strong>
+                                <small>Helpful tips for better results</small>
+                            </div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Mobile Push Notifications -->
+                <h2 style="margin-top: 5%; font-size: 20px; font-weight: 550;">Mobile Push Notifications</h2>
+                <div id="Mobile-Push-Notifications" class="mobile-push-notifications">
+                    
+                    
+                        <!-- Enable Push Notifications -->
+                        <div class="notification-row">
+                            <div class="notification-icon-text">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div class="text">
+                                    <strong>Enable Push Notifications</strong>
+                                    <small>Master toggle for Mobile notification</small>
+                                </div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    
+                        <!-- Processing Completed -->
+                        <div class="notification-row">
+                            <div class="notification-icon-text">
+                                <i class="fas fa-check-circle"></i>
+                                <div class="text">
+                                    <strong>Processing Completed</strong>
+                                    <small>Notify when AI tasks are finished</small>
+                                </div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    
+                        <!-- Critical Alerts -->
+                        <div class="notification-row">
+                            <div class="notification-icon-text">
+                                <i class="fas fa-bug"></i>
+                                <div class="text">
+                                    <strong>Critical Alerts</strong>
+                                    <small>Important security and system alerts</small>
+                                </div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                </div>
+                <h2 style="margin-top: 5%; font-size: 20px; font-weight: 550;">Notification Schedule</h2>
+                <div id="Notification-Schedule" class="notification-schedule">
+                    
+                
+                    <!-- Quiet Hours Toggle -->
+                    <div class="notification-row">
+                        <div class="notification-icon-text">
+                            <i class="fas fa-moon"></i>
+                            <div class="text">
+                                <strong>Quiet Hours</strong>
+                                <small>Don't send notification during selected hours</small>
+                            </div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                
+                    <!-- Time Range Selection -->
+                    <div class="notification-row">
+                        <div class="notification-icon-text" >
+                            <i class="fas fa-clock"></i>
+                            <div class="text" class="time-range">
+                                <strong>Time Range</strong>
+                                <small>Set your quiet hours time period</small>
+                            </div>
+                        </div>
+                        <select>
+                            <option value="none">Select</option>
+                            <option value="22-06">10 PM - 6 AM</option>
+                            <option value="00-08">12 AM - 8 AM</option>
+                            <option value="23-07">11 PM - 7 AM</option>
+                        </select>
+                    </div>
+                
+                    <!-- Notification Frequency -->
+                    <div class="notification-row">
+                        <div class="notification-icon-text">
+                            <i class="fas fa-bell-slash"></i>
+                            <div class="text">
+                                <strong>Notification Frequency</strong>
+                                <small>How often to receive batched notifications</small>
+                            </div>
+                        </div>
+                        <select>
+                            <option value="none">Select</option>
+                            <option value="immediate">Immediately</option>
+                            <option value="hourly">Hourly</option>
+                            <option value="daily">Daily Summary</option>
+                        </select>
+                    </div>
+                </div>
+
+                 <!-- Action Buttons -->
+                 <div class="settings-actions" style="margin-top: 40px; display: flex; gap: 15px; height: 100px;">
+
+                    <button class="btn-save" style="height: 50px;">
+                        Save Changes
+                    </button>
+
+                    <button class="btn-reset" style="height: 50px;">
+                         Reset to Defaults
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- 5th Content -->
+            <div id="Data-and-Privacy" class="content">
+                <!-- Content for Data-and-privacy -->
+                <h1>Security & Privacy Settings</h1>
+                <div id="Security-and-Privacy-Settings" class="security-and-privacy-settings">
+                    
+                    
+                    <!-- Data Management Icon -->
+                    <div class="icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    
+                    <!-- Data Management Text -->
+                    <h2>Data Management</h2>
+                    <p>Control your data and download or clear information associated with your Account.</p>
+                </div>
+                <!-- Download All Data -->
+                <div class="setting-option">
+                    <div class="setting-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <div class="setting-text">
+                        <h3>Download all the data</h3>
+                        <p>Export all your account data as a zip file</p>
+                    </div>
+                    <div class="setting-action">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Clear Activity Logs -->
+                <div class="setting-option">
+                    <div class="setting-icon">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <div class="setting-text">
+                        <h3>Clear activity logs</h3>
+                        <p>Remove all activity history from your account</p>
+                    </div>
+                    <div class="setting-action">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Privacy Controls Section -->
+                <div class="privacy-control">
+                    <div class="icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h2>Privacy Controls</h2>
+                    <p>Manage how your information is used and shared within the platform.</p>
+                </div>
+
+                <!-- Data Sharing Option -->
+                <div class="setting-option">    
+                    <div class="setting-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="setting-text">
+                        <h3>Data Sharing</h3>
+                        <p>Control how your data is shared with unknown parties</p>
+                    </div>
+                    <div class="setting-toggle">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Analytics Tracking Option -->
+                <div class="setting-option">
+                    <div class="setting-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="setting-text">
+                        <h3>Analytics Tracking</h3>
+                        <p>Allow usage data collection for service improvement</p>
+                    </div>
+                    <div class="setting-toggle">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Cookie Preferences Option -->
+                <div class="setting-option">
+                    <div class="setting-icon">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <div class="setting-text">
+                        <h3>Cookie Preferences</h3>
+                        <p>Manage cookie settings for your account</p>
+                    </div>
+                    <div class="setting-action" style="color: #333;">
+                        <i class="fas fa-cog" style="cursor: pointer;"></i>
+                    </div>
+                </div>
+                <div class="account-deletion">
+                    <div class="icon">
+                        <i class="fas fa-user-slash"></i>
+                    </div>
+                    <h2>Account Deletion</h2>
+                    <p>Permanently remove your Account and all associated data from our Systems.</p>
+                    <!-- Delete Account Button -->
+                    <button class="delete-btn">Delete Account</button>
+                </div>
+                <footer></footer>
+            </div>
+
+
+            <!-- 6th Content -->
+            <div id="Integration-Settings" class="content">
+                <!-- Content for Integration-settings -->
+                <h1>Integration Settings</h1>
+                <!-- New Integration Settings Section -->
+                <div class="integration-section">
+                    
+                    <!-- Email SMTP Setup Row -->
+                    <div class="smtp-setup">
+                        <div class="smtp-info">
+                            <i class="fas fa-envelope" style="color: #6B54FF;"></i>
+                            <div>
+                                <strong>Email SMTP setup</strong><br>
+                                <small>Configure email server settings</small>
+                            </div>
+                        </div>
+                        <i class="fas fa-edit" onclick="editSMTP()" style="color: #333;"></i>
+                    </div>
+            
+                    <!-- WebHook URL Section -->
+                    <div class="webhook-url">
+                        <strong>WebHook URL</strong><br>
+                        <div class="webhook-link">
+                            <a href="https://api.techai.com/webhooks/incoming" target="_blank">
+                                https://api.techai.com/webhooks/incoming
+                            </a>
+                            <i class="fas fa-copy" onclick="copyToClipboard()"></i>
+                        </div>
+                    </div>
+            
+                    <!-- Save Button -->
+                    <button class="save-button" onclick="saveIntegrations()">Save Integrations</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./Js/script.js"></script>
+</body>
+</html>

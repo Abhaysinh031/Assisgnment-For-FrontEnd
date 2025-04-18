@@ -1,0 +1,323 @@
+.notification-preferences {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    
+}
+
+.notification-preferences .icon i {
+    color: #007bff;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.notification-preferences h2 {
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+.notification-preferences p {
+    color: #555;
+    margin: 10px;
+    padding-top: 3px;
+}
+
+
+/* Email notifications style */
+
+.email-notifications {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    
+}
+
+.notification-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-top: 10px;
+}
+
+.notification-row:last-child {
+    border-bottom: none;
+}
+
+.notification-icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notification-icon-text i {
+    font-size: 24px;
+    color: #6B54FF;
+    padding-right: 10px;
+}
+
+.notification-icon-text .text {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.notification-icon-text .text small {
+    font-size: 0.85em;
+    color: #555;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #6B54FF;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+
+/* In-App Notifications */
+
+.in-app-notifications {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+   
+}
+
+.notification-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.notification-row:last-child {
+    border-bottom: none;
+}
+
+.notification-icon-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.notification-icon-text i {
+    font-size: 20px;
+    color: #6B54FF;
+    min-width: 30px;
+    text-align: center;
+}
+
+.notification-icon-text .text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    line-height: 1.4;
+}
+
+.notification-icon-text .text small {
+    font-size: 0.85em;
+    color: #555;
+}
+
+/* Align toggles and selects to the right */
+.notification-row label.switch,
+.notification-row select {
+    margin-left: auto;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #6B54FF;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+/* Mobile push notification style */
+
+.mobile-push-notifications{
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+   
+}
+
+
+/* Notifiaction Schedule */
+
+.notification-schedule{
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.notification-row select {
+    padding: 6px 10px;
+    font-size: 0.95em;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    min-width: 180px;
+}
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .notification-row {
+        flex-direction: column;
+    }
+
+    .notification-icon-text {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .notification-icon-text .text {
+        margin-left: 10px;
+    }
+
+
+    /* Adjust switch position to be on the right on smaller screens */
+    .notification-row label.switch,
+    .notification-row select {
+        /* margin-right: 50%; */
+        margin-top: 10px;
+    }
+
+    .notification-row .switch {
+        margin-left: auto;
+    }
+
+    .notification-icon-text i {
+        font-size: 18px;
+    }
+
+    .switch {
+        width: 40px;
+        height: 20px;
+    }
+
+    .slider:before {
+        height: 16px;
+        width: 16px;
+        left: 2px;
+        bottom: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .notification-preferences h2 {
+        font-size: 1.3em;
+    }
+
+    .notification-icon-text i {
+        font-size: 16px;
+        
+    }
+
+    .notification-row select {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+
+    .switch {
+        width: 45px;
+        height: 22px;
+    }
+
+    .slider:before {
+        height: 18px;
+        width: 18px;
+        left: 2px;
+        bottom: 2px;
+    }
+
+    .notification-row label.switch,
+    .notification-row select {
+        margin-left: auto;
+    }
+}
